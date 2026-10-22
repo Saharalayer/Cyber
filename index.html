@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b2b">
+  <meta name="description" content="SaharaLayer منصة تكوينية مجانية للتوعية بالأمن السيبراني وحماية الحياة الرقمية.">
+  <title>SaharaLayer | صحراء لاير</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="SaharaLayer الصفحة الرئيسية">
+      <img src="assets/logo-saharalayer.jpg" alt="شعار صحراء لاير">
+      <span><strong>صحراء لاير</strong><small>SAHARALAYER · CYBER AWARENESS</small></span>
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="فتح القائمة">☰</button>
+    <nav id="mainNav">
+      <a href="#home" class="nav-link active" data-view="home">الرئيسية</a>
+      <a href="#courses" class="nav-link" data-view="courses">المسارات التكوينية</a>
+      <a href="#progress" class="nav-link" data-view="progress">تقدمي</a>
+      <a href="#about" class="nav-link" data-view="about">عن المبادرة</a>
+    </nav>
+    <button class="button button-outline" id="resetProgress">إعادة ضبط التجربة</button>
+  </header>
+
+  <main>
+    <section id="home" class="view active-view">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> مبادرة توعوية مستقلة · مجانية</span>
+          <h1>معًا نحو فضاء<br><span>رقمي أكثر أمانًا.</span></h1>
+          <p class="hero-text">تعلّم خطوات عملية لحماية حساباتك ومعلوماتك ونشاطك التجاري من المخاطر الرقمية، بأسلوب عربي مبسّط يناسب الجميع.</p>
+          <div class="hero-actions">
+            <button class="button button-gold" data-go="courses">ابدأ التعلّم <span>←</span></button>
+            <button class="button button-quiet" data-go="about">اكتشف المبادرة</button>
+          </div>
+          <div class="hero-proof"><span class="proof-icon">✓</span><span>محتوى عربي مبسّط</span><b></b><span>تعلّم حسب وقتك</span><b></b><span>مجانًا</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="shield"><svg viewBox="0 0 120 140" role="img" aria-label="درع الحماية"><path d="M60 7 L105 24 V61 C105 92 86 116 60 132 C34 116 15 92 15 61 V24 Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M39 68 L53 82 L82 51" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="floating-card card-top"><span class="mini-dot green"></span><span><strong>حماية رقمية</strong><small>خطوة تبدأ بالوعي</small></span></div>
+          <div class="floating-card card-bottom"><span class="lock">⌑</span><span><strong>خصوصيتك مهمة</strong><small>اجعل الأمان عادة</small></span></div>
+          <div class="art-label">SAHARALAYER <span>●</span> STAY AWARE</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="stat-icon">◈</span><strong>6</strong><span>وحدات تعلّم</span></article>
+        <article class="stat-card"><span class="stat-icon">✓</span><strong>تفاعلي</strong><span>أسئلة وتطبيقات</span></article>
+        <article class="stat-card"><span class="stat-icon">⌂</span><strong>بالعربية</strong><span>محتوى واضح ومباشر</span></article>
+        <article class="stat-card"><span class="stat-icon">∞</span><strong>مجاني</strong><span>تعلّم بالوتيرة المناسبة</span></article>
+      </div>
+      <section class="section-block">
+        <div class="section-heading"><div><span class="eyebrow">ابدأ من الأساسيات</span><h2>رحلتك نحو أمان رقمي أفضل</h2></div><button class="text-button" data-go="courses">عرض جميع الوحدات ←</button></div>
+        <div id="homeCourses" class="course-grid"></div>
+      </section>
+      <div class="notice"><span class="notice-symbol">i</span><p><strong>ملاحظة مهمة:</strong> SaharaLayer مبادرة توعوية مستقلة وليست مؤسسة حكومية أو جهة اعتماد رسمية. أي شهادة تجريبية داخل هذه النسخة لا تمثل اعتمادًا مهنيًا.</p></div>
+    </section>
+
+    <section id="courses" class="view">
+      <div class="page-heading"><span class="eyebrow">مكتبة التعلّم</span><h1>المسارات التكوينية</h1><p>اختر وحدة، اقرأ الدرس، ثم اختبر فهمك. يُحفظ تقدمك على هذا المتصفح فقط.</p></div>
+      <div class="filter-row"><span id="courseCount">6 وحدات</span><div class="progress-track"><span id="overallBar"></span></div><strong id="overallText">0% مكتمل</strong></div>
+      <div id="allCourses" class="course-grid"></div>
+    </section>
+
+    <section id="lesson" class="view">
+      <button class="back-link" data-go="courses">→ العودة إلى المسارات</button>
+      <div id="lessonContent"></div>
+    </section>
+
+    <section id="quiz" class="view">
+      <button class="back-link" data-go="courses">→ العودة إلى المسارات</button>
+      <div id="quizContent"></div>
+    </section>
+
+    <section id="progress" class="view">
+      <div class="page-heading"><span class="eyebrow">مسارك الشخصي</span><h1>تقدّمك في التعلّم</h1><p>هذه البيانات محفوظة محليًا في المتصفح الحالي وليست حسابًا سحابيًا.</p></div>
+      <div class="progress-summary">
+        <div class="progress-ring" id="progressRing"><div><strong id="progressPercent">0%</strong><small>مكتمل</small></div></div>
+        <div><span class="eyebrow">استمر خطوة بخطوة</span><h2 id="progressHeadline">رحلتك تبدأ الآن</h2><p id="progressDescription">ابدأ بأول وحدة لبناء عادات رقمية أكثر أمانًا.</p><button class="button button-gold" data-go="courses">متابعة التعلّم ←</button></div>
+      </div>
+      <h2 class="subheading">الوحدات وحالتها</h2><div id="progressList" class="progress-list"></div>
+      <div class="notice"><span class="notice-symbol">i</span><p>لا تُدخل كلمات مرور حقيقية أو بيانات حساسة في هذه النسخة التجريبية. لا توجد قاعدة بيانات أو تسجيل دخول حقيقي حتى الآن.</p></div>
+    </section>
+
+    <section id="about" class="view">
+      <div class="page-heading"><span class="eyebrow">عن المبادرة</span><h1>الوعي هو خط الدفاع الأول.</h1><p>SaharaLayer | صحراء لاير مبادرة شخصية مستقلة تهدف إلى تبسيط مفاهيم الأمن السيبراني وتمكين الأفراد والأنشطة الصغيرة من اتخاذ خطوات عملية لحماية حياتهم الرقمية.</p></div>
+      <div class="about-grid">
+        <article class="about-card"><span>01</span><h3>لمن هذه المنصة؟</h3><p>للتجار وأصحاب المشاريع الصغيرة والمدونين وصناع المحتوى وكل من يرغب في فهم المخاطر الرقمية.</p></article>
+        <article class="about-card"><span>02</span><h3>كيف نتعلّم؟</h3><p>دروس قصيرة، أمثلة واقعية، اختبارات مبسّطة، وخطوات قابلة للتطبيق في الحياة اليومية.</p></article>
+        <article class="about-card"><span>03</span><h3>ما حدودها؟</h3><p>المحتوى للتوعية والتعليم العام، ولا يُعد استشارة أمنية متخصصة أو اعتمادًا رسميًا.</p></article>
+      </div>
+      <div class="manifesto"><span class="eyebrow">SaharaLayer</span><h2>معرفة أوضح. قرارات أذكى. فضاء رقمي أكثر أمانًا.</h2><p>نسعى إلى جعل أساسيات الأمن الرقمي مفهومة ومتاحة للجميع.</p></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand">صحراء لاير <span>SAHARALAYER</span></div><p>مبادرة توعوية مستقلة في الأمن السيبراني · نسخة تجريبية محلية</p><small>© <span id="year"></span> SaharaLayer. جميع الحقوق محفوظة.</small></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
